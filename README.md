@@ -1,6 +1,6 @@
 # Text_Classification
 
-中文文本分类，Bert，ERNIE ，TextCNN，TextRNN，FastText，TextRCNN，BiLSTM_Attention, DPCNN, Transformer, 
+中文文本分类，Bert，ERNIE ，TextCNN，TextRNN，FastText，TextRCNN，BiLSTM_Attention, DPCNN, Transformer。
 
 ## 环境
 
@@ -23,6 +23,12 @@ tensorboardX
 训练集|18万
 验证集|1万
 测试集|1万
+
+### 更换自己数据集
+
+- 按照`data/THUCNews/`格式化自己的数据集
+- 提前分好词，词之间用空格隔开
+- 使用预训练词向量：utils.py的main函数可以提取词表对应的预训练词向量。
 
 ## 使用说明
 
