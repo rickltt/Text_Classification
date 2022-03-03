@@ -1,4 +1,5 @@
 *.DB_Store
+*/.DB_Store
 
 *.log
 *.pyc
