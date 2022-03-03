@@ -1,9 +1,0 @@
-*.DB_Store
-*/.DB_Store
-
-*.log
-*.pyc
-*/*/*/__pycache__/
-
-*/*/__pycache__/
-*/__pycache__/
