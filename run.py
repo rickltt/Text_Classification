@@ -5,9 +5,10 @@ import numpy as np
 from train_eval import train, init_network
 from importlib import import_module
 import argparse
-from utils import build_dataset_bert, build_iterator, get_time_dif
+from utils import build_dataset_bert, build_iterator, get_time_dif,build_dataset
+import warnings
+warnings.filterwarnings("ignore")
 
-torch.cuda.empty_cache()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Chinese Text Classification')
@@ -16,24 +17,25 @@ if __name__ == '__main__':
     parser.add_argument('--word', default=False, type=bool, help='True for word, False for char')
     args = parser.parse_args()
 
-    dataset = 'data/THUCNews'  # 数据集
+    #dataset = 'data/THUCNews'  # 数据集
+    dataset = 'data/toutiao_news'  # 数据集
     model_name = args.model  # 'TextRCNN'  # TextCNN, TextRNN, FastText, TextRCNN, TextRNN_Att, DPCNN, Transformer
     
     # 搜狗新闻:embedding_SougouNews.npz, 腾讯:embedding_Tencent.npz, 随机初始化:random
-    embedding = 'embedding_SougouNews.npz'
+    embedding = 'data/word_embedding/embedding_SougouNews.npz'
     if args.embedding == 'random':
         embedding = 'random'
     if model_name == 'FastText':
         from utils_fasttext import build_dataset, build_iterator, get_time_dif
         embedding = 'random'
-    else:
-        from utils import build_dataset, build_iterator, get_time_dif
-
+   
+    
+    print(embedding)
     x = import_module('models.' + model_name)
-    print(model_name)
+    #print(model_name)
     if model_name[:4] == 'Bert':
         model_name = 'Bert'
-    print(model_name)
+    #print(model_name)
     if model_name == 'Bert':
         config = x.Config(dataset)
     else:

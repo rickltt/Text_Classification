@@ -12,7 +12,7 @@ tensorboardX
 
 ## 中文数据集
 
-[THUCNews](http://thuctc.thunlp.org/)
+### [THUCNews](http://thuctc.thunlp.org/)
 
 类别：财经、房产、股票、教育、科技、社会、时政、体育、游戏、娱乐。
 
@@ -24,6 +24,33 @@ tensorboardX
 验证集|1万
 测试集|1万
 
+### 头条新闻数据集
+
+数据规模：
+
+共382688条，分布于15个分类中。0.7、0.15、0.15比例划分数据集，验证集，测试集。
+
+数据处理函数可见`process_data.py` , `toutiao_cat_data.txt`可以在这里[下载](https://github.com/aceimnorstuvwxz/toutiao-text-classfication-dataset)。
+
+15个分类：
+
+```
+故事 news_story
+文化 news_culture
+娱乐 news_entertainment
+体育 news_sports
+财经 news_finance
+房产 news_house
+汽车 news_car
+教育 news_edu 
+科技 news_tech
+军事 news_military
+旅游 news_travel
+国际 news_world
+股票 stock
+三农 news_agriculture
+游戏 news_game
+```
 ### 更换自己数据集
 
 - 按照`data/THUCNews/`格式化自己的数据集

@@ -15,7 +15,7 @@ class Config():
         self.save_path = data_path + '/saved_dict/' + self.model_name + '.ckpt'        # 模型训练结果
         self.log_path = data_path + '/log/' + self.model_name
         self.embedding_pretrained = torch.tensor(
-            np.load(data_path + '/' + embedding)["embeddings"].astype('float32'))\
+            np.load(embedding)["embeddings"].astype('float32'))\
             if embedding != 'random' else None                                       # 预训练词向量
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')   # 设备
 
