@@ -57,7 +57,7 @@ tensorboardX
 - 按照`data/THUCNews/`格式化自己的数据集
 - 提前分好词，词之间用空格隔开
 - 使用预训练词向量：utils.py的main函数可以提取词表对应的预训练词向量。
-- 文件`sgns.sougou.char.bz2`可以在这里下载[下载](https://github.com/Embedding/Chinese-Word-Vectors)
+- 文件`sgns.sougou.char.bz2`可以在这里[下载](https://github.com/Embedding/Chinese-Word-Vectors)
 
 - 使用命令`bunzip2 sgns.sougou.char.bz2 `解压
 
