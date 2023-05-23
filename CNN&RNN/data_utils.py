@@ -63,8 +63,8 @@ class TC_Dataset(Dataset):
         fname = os.path.join(args.data_dir, '{}.txt'.format(mode))
         fin = open(fname, 'r')
         data = fin.readlines()
-        random.shuffle(data)
-        data = data[:5000]
+        # random.shuffle(data)
+        # data = data[:5000]
         fin.close()
 
         max_seq_length = args.max_seq_length

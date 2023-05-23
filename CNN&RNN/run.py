@@ -134,7 +134,7 @@ def main():
     ## Required parameters
     parser.add_argument('--dataset', default='THUCNews', type=str, help='THUCNews, toutiao')
     parser.add_argument('--model_type', default='DPCNN', type=str, help='TextCNN, TextRNN, TextRCNN, DPCNN')
-    parser.add_argument("--embedding_file", default='/home/tongtao.ling/ltt_code/event_detection/data/token_vec_300.bin', type=str)
+    parser.add_argument("--embedding_file", default='../pretrained/token_vec_300.bin', type=str)
     parser.add_argument("--output_dir", default='output', type=str, 
                         help="The output directory where the model predictions and checkpoints will be written.")
     parser.add_argument("--max_seq_length", default=128, type=int,

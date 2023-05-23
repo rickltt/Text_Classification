@@ -67,6 +67,10 @@ model_type: TextCNN, TextRNN, TextRCNN, DPCNN, Bert, BertCNN, BertRNN, BertRCNN,
 python run.py --do_train --do_eval --model_type Bert
 ```
 
+## Trainer
+
+使用Transformers的Trainner的代码在[Trainer](Trainer/)下面, 支持Bert, BertCNN, BertRNN, BertRCNN, BertDPCNN。
+
 
 ## 对应论文
 
